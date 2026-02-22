@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Tong Chun Mun | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CDN -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background: #f8fafc; color: #1e293b; }
+    body {
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
     .hero {
-      background: linear-gradient(120deg,#0ea5e9 70%,#1e293b 100%);
+      background: linear-gradient(120deg, #0ea5e9 70%, #1e293b 100%);
       color: #fff;
       padding: 64px 0 40px 0;
-      box-shadow: 0 2px 18px 0 rgba(14,165,233,0.13);
+      box-shadow: 0 2px 18px 0 rgba(14, 165, 233, 0.13);
     }
-    .hero h1 { font-size: 3rem; }
-    .avatar { width: 130px; border-radius: 50%; margin-bottom: 12px; border: 4px solid #38bdf8; box-shadow: 0 2px 12px rgba(30,41,59,0.09);}
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .avatar {
+      width: 130px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      border: 4px solid #38bdf8;
+      box-shadow: 0 2px 12px rgba(30, 41, 59, 0.09);
+    }
+
     .section-title {
       border-left: 4px solid #0ea5e9;
       padding-left: 10px;
@@ -23,27 +40,32 @@
       font-weight: 600;
       letter-spacing: .5px;
     }
+
     .project-card {
-      box-shadow: 0 2px 14px rgba(14,165,233,0.07);
+      box-shadow: 0 2px 14px rgba(14, 165, 233, 0.07);
       border: none;
       transition: transform 0.12s, box-shadow 0.12s;
       cursor: pointer;
     }
+
     .project-card:hover {
       transform: translateY(-6px) scale(1.025);
-      box-shadow: 0 6px 30px 0 rgba(14,165,233,0.17);
+      box-shadow: 0 6px 30px 0 rgba(14, 165, 233, 0.17);
       background: #f0faff;
     }
+
     .badge {
       background: #0ea5e9;
       font-size: .8em;
       margin-right: 5px;
     }
+
     .timeline {
       position: relative;
       margin-left: 10px;
       margin-bottom: 28px;
     }
+
     .timeline::before {
       content: '';
       position: absolute;
@@ -54,12 +76,15 @@
       background: #0ea5e9;
       opacity: 0.3;
     }
+
     .timeline-item {
       margin-bottom: 18px;
       position: relative;
     }
+
     .timeline-dot {
-      width: 13px; height: 13px;
+      width: 13px;
+      height: 13px;
       background: #0ea5e9;
       border-radius: 50%;
       position: absolute;
@@ -68,19 +93,28 @@
       border: 3px solid #e0f2fe;
       z-index: 1;
     }
+
     .timeline-content {
       margin-left: 24px;
       padding-bottom: 2px;
     }
+
     .section-bg {
       background: #f0faff;
       border-radius: 12px;
       padding: 28px 20px;
       margin-bottom: 32px;
-      box-shadow: 0 1px 6px 0 rgba(14,165,233,0.05);
+      box-shadow: 0 1px 6px 0 rgba(14, 165, 233, 0.05);
     }
-    a { color: #0ea5e9; }
-    a:hover { text-decoration: underline; }
+
+    a {
+      color: #0ea5e9;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       background: #1e293b;
       color: #cbd5e1;
@@ -89,146 +123,171 @@
       text-align: center;
       margin-top: 38px;
     }
-    .contact-list li { margin-bottom: 4px; }
+
+    .contact-list li {
+      margin-bottom: 4px;
+    }
+
     @media (max-width: 600px) {
-      .hero h1 { font-size: 2.1rem; }
-      .section-bg { padding: 18px 6px; }
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .section-bg {
+        padding: 18px 6px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Tong Chun Mun</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section class="hero text-center">
-  <div class="container">
-    <!-- <img src="your-photo.jpg" alt="Avatar" class="avatar mb-2"> Uncomment & add your photo -->
-    <h1 class="fw-bold mb-2">Tong Chun Mun</h1>
-    <p class="lead mb-3">Data Science Grad</p>
-    <div class="contact-info mb-2">
-      <span class="me-2">📍 Kuala Lumpur, Malaysia</span>
-      <span class="me-2">| <a href="mailto:cmtong123@gmail.com" style="color: #f0faff;">cmtong123@gmail.com</a></span>
-      <span class="me-2">| <a href="https://github.com/tc043" target="_blank" style="color: #f0faff;">GitHub</a></span>
-    </div>
-    <small>Internship Period: 23/06/2025 - 07/12/2025</small>
-  </div>
-</section>
-
-<!-- About Section -->
-<section class="container section-bg mt-5" id="about">
-  <h2 class="section-title">About Me</h2>
-  <p>
-    Hi! I'm Chun Mun, a passionate Data Science student at TARUMT. I love building solutions that combine analytics, programming, and creativity—from AI chatbots to web tools. I'm currently seeking an internship where I can apply my technical skills and eagerness to learn in real-world projects, especially in web development and data-driven applications.
-  </p>
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="timeline-dot"></span>
-      <div class="timeline-content">
-        <strong>Bachelor's Degree in Data Science</strong> — Tunku Abdul Rahman University of Management and Technology (TARUMT)<br>
-        <small>Nov 2022 – Dec 2025</small>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Tong Chun Mun</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- Skills Section -->
-<section class="container section-bg" id="skills">
-  <h2 class="section-title">Skills</h2>
-  <div class="row">
-    <div class="col-md-6 mb-3">
-      <h6 class="fw-semibold">Programming & Web</h6>
-      <ul>
-        <li><span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript</span> <span class="badge bg-secondary">Bootstrap</span></li>
-        <li><span class="badge bg-secondary">C++</span> <span class="badge bg-secondary">Python</span> <span class="badge bg-secondary">Java</span> <span class="badge bg-secondary">R</span> <span class="badge bg-secondary">SQL</span> <span class="badge bg-secondary">Dart (Flutter)</span></li>
-        <li>WordPress (basic)</li>
-      </ul>
+  <!-- Hero -->
+  <section class="hero text-center">
+    <div class="container">
+      <!-- <img src="your-photo.jpg" alt="Avatar" class="avatar mb-2"> Uncomment & add your photo -->
+      <h1 class="fw-bold mb-2">Tong Chun Mun</h1>
+      <p class="lead mb-3">Data Science Grad</p>
+      <div class="contact-info mb-2">
+        <span class="me-2">📍 Kuala Lumpur, Malaysia</span>
+        <span class="me-2">| <a href="mailto:cmtong123@gmail.com" style="color: #f0faff;">cmtong123@gmail.com</a></span>
+        <span class="me-2">| <a href="tel:+601133728112" style="color: #f0faff;">+60 11-3372 8112</a></span>
+        <span class="me-2">| <a href="https://github.com/tc043" target="_blank"
+            style="color: #f0faff;">GitHub</a></span>
+      </div>
+      <small>Internship Period: 23/06/2025 - 07/12/2025</small>
     </div>
-    <div class="col-md-6 mb-3">
-      <h6 class="fw-semibold">Data, AI & Tools</h6>
-      <ul>
-        <li><span class="badge bg-info">TensorFlow</span> <span class="badge bg-info">PyTorch</span> <span class="badge bg-info">Scikit-learn</span> <span class="badge bg-info">OpenCV</span></li>
-        <li><span class="badge bg-success">Pandas</span> <span class="badge bg-success">Matplotlib</span> <span class="badge bg-success">Seaborn</span></li>
-        <li>FastAPI, Streamlit, Flutter</li>
-        <li>Oracle, Firebase, MongoDB, Chroma DB, Pinecone</li>
-        <li>Git, Docker, AWS, Hadoop, Spark</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Projects Section -->
-<section class="container section-bg" id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="row g-4">
-    <div class="col-md-6">
-      <div class="card project-card p-3 h-100">
-        <h5 class="mb-2">Chatbot for Healthy Lifestyle</h5>
-        <span class="badge">Python</span> <span class="badge bg-secondary">Flowise</span> <span class="badge bg-secondary">Gemini API</span>
-        <p class="mt-2 mb-2">Developed an AI chatbot that gives personalized health advice using LLMs and reinforcement learning.</p>
-        <!-- <a href="#" class="link-primary" target="_blank">View Code</a> -->
+  <!-- About Section -->
+  <section class="container section-bg mt-5" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      Hi! I'm Chun Mun, a passionate Data Science student at TARUMT. I love building solutions that combine analytics,
+      programming, and creativity—from AI chatbots to web tools. I'm currently seeking an internship where I can apply
+      my technical skills and eagerness to learn in real-world projects, especially in web development and data-driven
+      applications.
+    </p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <strong>Bachelor's Degree in Data Science</strong> — Tunku Abdul Rahman University of Management and
+          Technology (TARUMT)<br>
+          <small>Nov 2022 – Dec 2025</small>
+        </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="card project-card p-3 h-100">
-        <h5 class="mb-2">Medical Digital Watermarking</h5>
-        <span class="badge">Python</span> <span class="badge bg-secondary">OpenCV</span>
-        <p class="mt-2 mb-2">Designed a scheme to securely embed patient info in knee X-ray images for healthcare data protection.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="container section-bg" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <h6 class="fw-semibold">Programming & Web</h6>
+        <ul>
+          <li><span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript</span> <span
+              class="badge bg-secondary">Bootstrap</span></li>
+          <li><span class="badge bg-secondary">C++</span> <span class="badge bg-secondary">Python</span> <span
+              class="badge bg-secondary">Java</span> <span class="badge bg-secondary">R</span> <span
+              class="badge bg-secondary">SQL</span> <span class="badge bg-secondary">Dart (Flutter)</span></li>
+          <li>WordPress (basic)</li>
+        </ul>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h6 class="fw-semibold">Data, AI & Tools</h6>
+        <ul>
+          <li><span class="badge bg-info">TensorFlow</span> <span class="badge bg-info">PyTorch</span> <span
+              class="badge bg-info">Scikit-learn</span> <span class="badge bg-info">OpenCV</span></li>
+          <li><span class="badge bg-success">Pandas</span> <span class="badge bg-success">Matplotlib</span> <span
+              class="badge bg-success">Seaborn</span></li>
+          <li>FastAPI, Streamlit, Flutter</li>
+          <li>Oracle, Firebase, MongoDB, Chroma DB, Pinecone</li>
+          <li>Git, Docker, AWS, Hadoop, Spark</li>
+        </ul>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="card project-card p-3 h-100">
-        <h5 class="mb-2">PDF-based Conversational AI</h5>
-        <span class="badge">Python</span> <span class="badge bg-secondary">LangChain</span> <span class="badge bg-secondary">Gradio</span>
-        <p class="mt-2 mb-2">Built a chatbot that answers queries from PDF documents using modern NLP frameworks.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="container section-bg" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card project-card p-3 h-100">
+          <h5 class="mb-2">Chatbot for Healthy Lifestyle</h5>
+          <span class="badge">Python</span> <span class="badge bg-secondary">Flowise</span> <span
+            class="badge bg-secondary">Gemini API</span>
+          <p class="mt-2 mb-2">Developed an AI chatbot that gives personalized health advice using LLMs and
+            reinforcement learning.</p>
+          <!-- <a href="#" class="link-primary" target="_blank">View Code</a> -->
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card project-card p-3 h-100">
-        <h5 class="mb-2">Wine Clustering (Unsupervised ML)</h5>
-        <span class="badge">Python</span> <span class="badge bg-secondary">BIRCH</span> <span class="badge bg-secondary">GMM</span>
-        <p class="mt-2 mb-2">Clustered wine datasets to discover insights using BIRCH, GMM, and other ML algorithms.</p>
+      <div class="col-md-6">
+        <div class="card project-card p-3 h-100">
+          <h5 class="mb-2">Medical Digital Watermarking</h5>
+          <span class="badge">Python</span> <span class="badge bg-secondary">OpenCV</span>
+          <p class="mt-2 mb-2">Designed a scheme to securely embed patient info in knee X-ray images for healthcare data
+            protection.</p>
+        </div>
       </div>
+      <div class="col-md-6">
+        <div class="card project-card p-3 h-100">
+          <h5 class="mb-2">PDF-based Conversational AI</h5>
+          <span class="badge">Python</span> <span class="badge bg-secondary">LangChain</span> <span
+            class="badge bg-secondary">Gradio</span>
+          <p class="mt-2 mb-2">Built a chatbot that answers queries from PDF documents using modern NLP frameworks.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card project-card p-3 h-100">
+          <h5 class="mb-2">Wine Clustering (Unsupervised ML)</h5>
+          <span class="badge">Python</span> <span class="badge bg-secondary">BIRCH</span> <span
+            class="badge bg-secondary">GMM</span>
+          <p class="mt-2 mb-2">Clustered wine datasets to discover insights using BIRCH, GMM, and other ML algorithms.
+          </p>
+        </div>
+      </div>
+      <!-- Add more projects if needed -->
     </div>
-    <!-- Add more projects if needed -->
-  </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section class="container section-bg" id="contact">
-  <h2 class="section-title">Contact</h2>
-  <ul class="contact-list">
-    <li><strong>Email:</strong> <a href="mailto:cmtong123@gmail.com">cmtong123@gmail.com</a></li>
-    <li><strong>Phone:</strong> +60 11-3372 8112</li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/tc043" target="_blank">github.com/tc043</a></li>
-  </ul>
-  <p class="mt-3">Interested in collaborating or have an opportunity? Reach out anytime!</p>
-</section>
+  <!-- Contact Section -->
+  <section class="container section-bg" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:cmtong123@gmail.com">cmtong123@gmail.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+601133728112">+60 11-3372 8112</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/tc043" target="_blank">github.com/tc043</a></li>
+    </ul>
+    <p class="mt-3">Interested in collaborating or have an opportunity? Reach out anytime!</p>
+  </section>
 
-<footer>
-  &copy; 2025 Tong Chun Mun. All rights reserved.
-</footer>
+  <footer>
+    &copy; 2025 Tong Chun Mun. All rights reserved.
+  </footer>
 
-<!-- Bootstrap Bundle JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-
-
-
